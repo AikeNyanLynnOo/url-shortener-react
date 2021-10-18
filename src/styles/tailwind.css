@@ -21,11 +21,14 @@
   color: hsl(260, 8%, 14%);
 }
 .my-nav h1,
-.intro h2 {
+.intro h2,
+.my-mid-info h3,
+.my-mid-info h4 {
   color: hsl(255, 11%, 22%);
 }
 .my-nav li a,
-.intro p {
+.intro p,
+.my-mid-info p {
   color: hsl(257, 7%, 63%);
 }
 .my-nav li a:hover {
@@ -37,17 +40,72 @@
 .primary-btn:hover {
   background-color: rgba(42, 207, 207, 0.7);
 }
+.my-mid,
+.my-mid-info {
+  background-color: #eff1f7;
+}
+.my-mid {
+  height: 500px;
+}
+.my-width {
+  width: 81.5%;
+}
+.my-mid form,
+.my-circle {
+  background-color: hsl(257, 27%, 26%);
+}
+.my-mid span {
+  top: 90px;
+}
+.my-link-card .short-link {
+  color: hsl(180, 66%, 49%);
+}
+.small-block {
+  background-color: hsl(180, 66%, 49%);
+}
+.my-card {
+  min-height: 75%;
+}
+.my-info-flex {
+  min-height: 380px;
+}
 @media only screen and (max-width: 300px) {
   .my-intro-img {
     position: relative;
     right: -20px;
-    height : 200px;
+    height: 200px;
   }
 }
-@media only screen and (max-width: 640px) and (min-width : 350px) {
+@media only screen and (max-width: 640px) and (min-width: 350px) {
   .my-intro-img {
     position: relative;
     right: -30%;
-    height : 250px;
+    height: 250px;
   }
+}
+@media only screen and (max-width: 639px) {
+  .my-width {
+    width: 95%;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(257, 7%, 63%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(255, 11%, 22%);
 }

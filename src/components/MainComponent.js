@@ -1,5 +1,7 @@
 import Navbar from "./NavBarComponent";
 import Intro from "./IntroComponent";
+import Mid from "./MidComponent";
+import Footer from "./FooterComponent";
 
 import React from "react";
 class Main extends React.Component {
@@ -8,6 +10,8 @@ class Main extends React.Component {
       <React.Fragment>
         <Navbar />
         <Intro />
+        <Mid />
+        <Footer />
       </React.Fragment>
     );
   }
