@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ### Primary */
+.colors {
+  color: hsl(180, 66%, 49%);
+  color: hsl(257, 27%, 26%);
+
+  /* ### Secondary */
+  color: hsl(0, 87%, 67%);
+
+  /* ### Neutral */
+  color: hsl(0, 0%, 75%);
+  color: hsl(257, 7%, 63%);
+  color: hsl(255, 11%, 22%);
+  color: hsl(260, 8%, 14%);
+}
+.my-nav h1,
+.intro h2 {
+  color: hsl(255, 11%, 22%);
+}
+.my-nav li a,
+.intro p {
+  color: hsl(257, 7%, 63%);
+}
+.my-nav li a:hover {
+  color: hsl(255, 11%, 22%);
+}
+.primary-btn {
+  background-color: hsl(180, 66%, 49%);
+}
+.primary-btn:hover {
+  background-color: rgba(42, 207, 207, 0.7);
+}
+@media only screen and (max-width: 300px) {
+  .my-intro-img {
+    position: relative;
+    right: -20px;
+    height : 200px;
+  }
+}
+@media only screen and (max-width: 640px) and (min-width : 350px) {
+  .my-intro-img {
+    position: relative;
+    right: -30%;
+    height : 250px;
+  }
+}
