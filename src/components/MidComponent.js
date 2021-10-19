@@ -1,5 +1,8 @@
 import React from "react";
 import LinkCard from "./LinkCardComponent";
+import Card from "./CardComponent";
+
+import { INFO } from "../shared/data";
 
 class Mid extends React.Component {
   render() {
@@ -7,7 +10,7 @@ class Mid extends React.Component {
       <section>
         <section className="relative mt-20 sm:mt-16 my-mid">
           <form
-            className="absolute -top-20 sm:-top-16 left-2/4 transform -translate-x-2/4 my-width p-4 sm:p-10 block sm:flex justify-between items-center rounded-md border"
+            className="absolute -top-20 sm:-top-16 left-2/4 transform -translate-x-2/4 my-width p-4 sm:p-10 block sm:flex justify-between items-center rounded-md bg-no-repeat bg-center bg-cover border"
             style={{ backgroundImage: `url("/images/bg-shorten-desktop.svg")` }}
           >
             <input
@@ -55,69 +58,49 @@ class Mid extends React.Component {
             </div>
           </section>
         </section>
-        <section className="my-mid-info py-4 px-3 sm:px-16 lg:px-32">
+        <section className="my-mid-info pt-4 pb-20 px-3 sm:px-16 lg:px-32">
           <div className="my-width mx-auto text-center">
-            <h3 className="font-extrabold text-4xl">Advanced Statistics</h3>
+            <h3 className="font-extrabold text-3xl md:text-4xl">
+              Advanced Statistics
+            </h3>
             <p className="mt-5 px-3 lg:px-16 xl:px-40">
               Track how your links are performing access the web with our
               advanced statistics dashboard.
             </p>
           </div>
           <div className="block lg:flex h-auto mt-14 py-4 my-info-flex">
-            <div className="bg-white rounded-lg relative flex-1 self-start pb-6 pt-14 mt-5 lg:mt-0 text-center lg:text-left my-card">
-              <div className="absolute -top-8 left-2/4 transform -translate-x-2/4 lg:transform translate-x-2/4 lg:left-7 p-5 rounded-full my-circle">
-                <img
-                  src={"/images/icon-brand-recognition.svg"}
-                  className="h-7 w-7"
-                  alt="brand-icon"
-                />
-              </div>
-              <h4 className="font-semibold text-xl mb-4 mx-7">
-                Brand recognition
-              </h4>
-              <p className="mx-7 leading-7">
-                Boost your brand recognition with each click. Generic links
-                don't mean a thing. Branded links help instil confidence in your
-                content.
-              </p>
-            </div>
+            <Card
+              selfAlign={INFO[0].seftAlign}
+              img={INFO[0].img}
+              title={INFO[0].title}
+              description={INFO[0].description}
+            />
             <p className="mx-auto h-16 w-2 lg:h-2 lg:w-8 small-block self-center"></p>
-            <div className="bg-white rounded-lg relative flex-1 pb-6 pt-14 lg:mt-0 self-center text-center lg:text-left my-card">
-              <div className="absolute -top-8 left-2/4 transform -translate-x-2/4 lg:transform translate-x-2/4 lg:left-7 p-5 rounded-full my-circle">
-                <img
-                  src={"/images/icon-detailed-records.svg"}
-                  className="h-7 w-7"
-                  alt="brand-icon"
-                />
-              </div>
-              <h4 className="font-semibold text-xl mb-4 mx-7">
-                Brand recognition
-              </h4>
-              <p className="mx-7 leading-7">
-                Boost your brand recognition with each click. Generic links
-                don't mean a thing. Branded links help instil confidence in your
-                content.
-              </p>
-            </div>
+            <Card
+              selfAlign={INFO[1].seftAlign}
+              img={INFO[1].img}
+              title={INFO[1].title}
+              description={INFO[1].description}
+            />
             <p className="mx-auto h-16 w-2 lg:h-2 lg:w-8 small-block self-center"></p>
-            <div className="bg-white rounded-lg relative flex-1 pb-6 pt-14 lg:mt-0 self-end text-center lg:text-left my-card">
-              <div className="absolute -top-8 left-2/4 transform -translate-x-2/4 lg:transform translate-x-2/4 lg:left-7 p-5 rounded-full my-circle">
-                <img
-                  src={"/images/icon-fully-customizable.svg"}
-                  className="h-7 w-7"
-                  alt="brand-icon"
-                />
-              </div>
-              <h4 className="font-semibold text-xl mb-4 mx-7">
-                Brand recognition
-              </h4>
-              <p className="mx-7 leading-7">
-                Boost your brand recognition with each click. Generic links
-                don't mean a thing. Branded links help instil confidence in your
-                content.
-              </p>
-            </div>
+            <Card
+              selfAlign={INFO[2].seftAlign}
+              img={INFO[2].img}
+              title={INFO[2].title}
+              description={INFO[2].description}
+            />
           </div>
+        </section>
+        <section
+          className="py-16 w-full bg-no-repeat bg-center bg-cover boost-section"
+          style={{ backgroundImage: `url("/images/bg-shorten-desktop.svg")` }}
+        >
+          <h5 className="text-white text-center font-extrabold text-3xl md:text-4xl">
+            Boost your links today
+          </h5>
+          <button className="text-white rounded-3xl block w-40 mx-auto cursor-pointer py-3 mt-5 primary-btn">
+            Get Started
+          </button>
         </section>
       </section>
     );

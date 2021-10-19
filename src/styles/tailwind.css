@@ -51,7 +51,8 @@
   width: 81.5%;
 }
 .my-mid form,
-.my-circle {
+.my-circle,
+.boost-section {
   background-color: hsl(257, 27%, 26%);
 }
 .my-mid span {
@@ -69,6 +70,17 @@
 .my-info-flex {
   min-height: 380px;
 }
+
+.footer {
+  background-color: hsl(255, 11%, 22%);
+}
+.footer-nav a {
+  color: hsl(0, 0%, 75%);
+}
+.footer-nav a:hover {
+  color: hsl(180, 66%, 49%);
+}
+
 @media only screen and (max-width: 300px) {
   .my-intro-img {
     position: relative;
