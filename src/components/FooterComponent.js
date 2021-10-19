@@ -50,7 +50,7 @@ const Footer = (props) => {
         </ul>
       </div>
       <div className="flex-1 flex justify-center md:justify-between  mt-16 md:mt-0 footer-nav-icons">
-        <a href="/#" className="mx-5 md:mx-0">
+        <a href="/#" className="mx-3 md:mx-0">
           <img
             src={"/images/icon-facebook.svg"}
             alt="fb-icon"
@@ -63,7 +63,7 @@ const Footer = (props) => {
             }
           />
         </a>
-        <a href="/#" className="mx-5 md:mx-0">
+        <a href="/#" className="mx-3 md:mx-0">
           <img
             src={"/images/icon-twitter.svg"}
             alt="tt-icon"
@@ -76,7 +76,7 @@ const Footer = (props) => {
             }
           />
         </a>
-        <a href="/#" className="mx-5 md:mx-0">
+        <a href="/#" className="mx-3 md:mx-0">
           <img
             src={"/images/icon-pinterest.svg"}
             alt="pi-icon"
@@ -89,7 +89,7 @@ const Footer = (props) => {
             }
           />
         </a>
-        <a href="/#" className="mx-5 md:mx-0">
+        <a href="/#" className="mx-3 md:mx-0">
           <img
             src={"/images/icon-instagram.svg"}
             alt="ig-icon"

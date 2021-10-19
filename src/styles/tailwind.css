@@ -100,6 +100,12 @@
     width: 95%;
   }
 }
+@media only screen and (max-width: 210px) {
+  .footer-nav-icons a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 
 /* width */
 ::-webkit-scrollbar {
