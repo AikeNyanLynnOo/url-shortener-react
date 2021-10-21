@@ -10,8 +10,10 @@ class Mid extends React.Component {
       <section>
         <section
           className={`relative mt-20 sm:mt-16 my-mid ${
-            (!this.props.appState.recentLinks.length > 0 && "h-28") ||
-            "mid-height"
+            this.props.appState.recentLinks &&
+            this.props.appState.recentLinks.length > 0
+              ? "mid-height"
+              : "h-28"
           }`}
         >
           <form
