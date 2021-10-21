@@ -37,6 +37,9 @@
 .primary-btn {
   background-color: hsl(180, 66%, 49%);
 }
+.copy-btn {
+  min-width: 105px;
+}
 .primary-btn:hover {
   background-color: rgba(42, 207, 207, 0.7);
 }
@@ -44,8 +47,8 @@
 .my-mid-info {
   background-color: #eff1f7;
 }
-.my-mid {
-  height: 500px;
+.mid-height {
+  height: 450px;
 }
 .my-width {
   width: 81.5%;
