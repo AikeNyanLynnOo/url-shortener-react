@@ -57,7 +57,7 @@ class Main extends React.Component {
             self.enc([
               {
                 date: moment().calendar(),
-                shortLink: response.data.result.short_link,
+                shortLink: response.data.result.short_link2,
                 orgLink: response.data.result.original_link,
               },
             ])
@@ -66,7 +66,7 @@ class Main extends React.Component {
             recentLinks: [
               {
                 date: moment().calendar(),
-                shortLink: response.data.result.short_link,
+                shortLink: response.data.result.short_link2,
                 orgLink: response.data.result.original_link,
               },
             ],
@@ -75,7 +75,7 @@ class Main extends React.Component {
           var newArr = [...self.dec(localStorage.getItem("shrtLinks"))];
           newArr.unshift({
             date: moment().calendar(),
-            shortLink: response.data.result.short_link,
+            shortLink: response.data.result.short_link2,
             orgLink: response.data.result.original_link,
           });
           localStorage.setItem("shrtLinks", self.enc(newArr));
