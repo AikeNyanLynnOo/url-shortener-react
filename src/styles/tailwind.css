@@ -74,7 +74,7 @@
   min-height: 380px;
 }
 
-.footer {
+.footer,.footer-bg {
   background-color: hsl(255, 11%, 22%);
 }
 .footer-nav a {

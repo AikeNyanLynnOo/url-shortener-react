@@ -87,7 +87,7 @@ class Mid extends React.Component {
               </section>
             )}
         </section>
-        <section className="my-mid-info pt-4 pb-20 px-3 sm:px-16 lg:px-32">
+        <section className="my-mid-info pt-4 pb-16 px-3 sm:px-16 lg:px-32">
           <div className="my-width mx-auto text-center">
             <h3 className="font-extrabold text-3xl md:text-4xl">
               Advanced Statistics
