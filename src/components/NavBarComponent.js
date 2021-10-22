@@ -28,11 +28,11 @@ const Navbar = (props) => {
         </ul>
       </div>
       <img
-        src={"/images/menu.png"}
+        src={"./images/menu.png"}
         alt="menu-icon"
         className="block sm:hidden h-7 w-7 cursor-pointer"
-        onMouseOver={(e) => (e.currentTarget.src = "/images/menu_active.png")}
-        onMouseLeave={(e) => (e.currentTarget.src = "/images/menu.png")}
+        onMouseOver={(e) => (e.currentTarget.src = "./images/menu_active.png")}
+        onMouseLeave={(e) => (e.currentTarget.src = "./images/menu.png")}
       />
     </nav>
   );

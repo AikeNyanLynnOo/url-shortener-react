@@ -26,7 +26,7 @@ class Main extends React.Component {
       recentLinks:
         (localStorage.getItem("shrtLinks") &&
           this.dec(localStorage.getItem("shrtLinks"))) ||
-        null,
+        [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.shortenLink = this.shortenLink.bind(this);

@@ -18,7 +18,7 @@ class Mid extends React.Component {
         >
           <form
             className="absolute -top-20 sm:-top-16 left-2/4 transform -translate-x-2/4 my-width p-4 sm:p-10 block sm:flex justify-between items-center rounded-md bg-no-repeat bg-center bg-cover border"
-            style={{ backgroundImage: `url("/images/bg-shorten-desktop.svg")` }}
+            style={{ backgroundImage: `url("./images/bg-shorten-desktop.svg")` }}
             method="POST"
           >
             <input
@@ -122,7 +122,7 @@ class Mid extends React.Component {
         </section>
         <section
           className="py-16 w-full bg-no-repeat bg-center bg-cover boost-section"
-          style={{ backgroundImage: `url("/images/bg-shorten-desktop.svg")` }}
+          style={{ backgroundImage: `url("./images/bg-shorten-desktop.svg")` }}
         >
           <h5 className="text-white text-center font-extrabold text-3xl md:text-4xl">
             Boost your links today

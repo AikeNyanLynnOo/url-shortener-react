@@ -52,53 +52,53 @@ const Footer = (props) => {
       <div className="flex-1 flex justify-center md:justify-between  mt-16 md:mt-0 footer-nav-icons">
         <a href="/#" className="mx-3 md:mx-0">
           <img
-            src={"/images/icon-facebook.svg"}
+            src={"./images/icon-facebook.svg"}
             alt="fb-icon"
             className="h-6 w-6"
             onMouseOver={(e) =>
-              (e.currentTarget.src = "/images/facebook-active.svg")
+              (e.currentTarget.src = "./images/facebook-active.svg")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.src = "/images/icon-facebook.svg")
+              (e.currentTarget.src = "./images/icon-facebook.svg")
             }
           />
         </a>
         <a href="/#" className="mx-3 md:mx-0">
           <img
-            src={"/images/icon-twitter.svg"}
+            src={"./images/icon-twitter.svg"}
             alt="tt-icon"
             className="h-6 w-6"
             onMouseOver={(e) =>
-              (e.currentTarget.src = "/images/twitter-active.svg")
+              (e.currentTarget.src = "./images/twitter-active.svg")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.src = "/images/icon-twitter.svg")
+              (e.currentTarget.src = "./images/icon-twitter.svg")
             }
           />
         </a>
         <a href="/#" className="mx-3 md:mx-0">
           <img
-            src={"/images/icon-pinterest.svg"}
+            src={"./images/icon-pinterest.svg"}
             alt="pi-icon"
             className="h-6 w-6"
             onMouseOver={(e) =>
-              (e.currentTarget.src = "/images/pinterest-active.svg")
+              (e.currentTarget.src = "./images/pinterest-active.svg")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.src = "/images/icon-pinterest.svg")
+              (e.currentTarget.src = "./images/icon-pinterest.svg")
             }
           />
         </a>
         <a href="/#" className="mx-3 md:mx-0">
           <img
-            src={"/images/icon-instagram.svg"}
+            src={"./images/icon-instagram.svg"}
             alt="ig-icon"
             className="h-6 w-6"
             onMouseOver={(e) =>
-              (e.currentTarget.src = "/images/instagram-active.svg")
+              (e.currentTarget.src = "./images/instagram-active.svg")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.src = "/images/icon-instagram.svg")
+              (e.currentTarget.src = "./images/icon-instagram.svg")
             }
           />
         </a>
