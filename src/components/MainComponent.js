@@ -42,6 +42,7 @@ class Main extends React.Component {
       orgLink: "",
     });
     var self = this;
+    var now = new Date();
     axios
       .get(`${API}/shorten?url=${this.state.orgLink}`)
       .then(function (response) {
@@ -56,7 +57,7 @@ class Main extends React.Component {
             "shrtLinks",
             self.enc([
               {
-                date: moment().calendar(),
+                date: now,
                 shortLink: response.data.result.short_link2,
                 orgLink: response.data.result.original_link,
               },
@@ -65,7 +66,7 @@ class Main extends React.Component {
           self.setState({
             recentLinks: [
               {
-                date: moment().calendar(),
+                date: moment(now).calendar(),
                 shortLink: response.data.result.short_link2,
                 orgLink: response.data.result.original_link,
               },
@@ -74,10 +75,11 @@ class Main extends React.Component {
         } else {
           var newArr = [...self.dec(localStorage.getItem("shrtLinks"))];
           newArr.unshift({
-            date: moment().calendar(),
+            date: now,
             shortLink: response.data.result.short_link2,
             orgLink: response.data.result.original_link,
           });
+          newArr.forEach((el) => (el.date = moment(el.date).calendar()));
           localStorage.setItem("shrtLinks", self.enc(newArr));
           self.setState({
             recentLinks: newArr,
