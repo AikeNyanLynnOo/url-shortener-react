@@ -25,7 +25,7 @@ class Main extends React.Component {
       orgLink: "",
       recentLinks:
         (localStorage.getItem("shrtLinks") &&
-          this.dec(localStorage.getItem("shrtLinks"))) ||
+          this.getLinks(this.dec(localStorage.getItem("shrtLinks")))) ||
         [],
     };
     this.handleChange = this.handleChange.bind(this);
@@ -161,6 +161,10 @@ class Main extends React.Component {
     this.setState({
       recentLinks: updateLinks,
     });
+  }
+  getLinks(arr) {
+    arr.forEach((el) => (el.date = moment(el.date).calendar()));
+    return arr;
   }
   render() {
     return (
