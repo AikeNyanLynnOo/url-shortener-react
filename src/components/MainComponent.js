@@ -79,8 +79,8 @@ class Main extends React.Component {
             shortLink: response.data.result.short_link2,
             orgLink: response.data.result.original_link,
           });
-          newArr.forEach((el) => (el.date = moment(el.date).calendar()));
           localStorage.setItem("shrtLinks", self.enc(newArr));
+          newArr.forEach((el) => (el.date = moment(el.date).calendar()));
           self.setState({
             recentLinks: newArr,
           });
