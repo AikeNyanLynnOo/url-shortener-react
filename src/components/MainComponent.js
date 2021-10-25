@@ -158,6 +158,7 @@ class Main extends React.Component {
       (link, idx) => id !== idx
     );
     localStorage.setItem("shrtLinks", this.enc(updateLinks));
+    updateLinks.forEach((el) => (el.date = moment(el.date).calendar()));
     this.setState({
       recentLinks: updateLinks,
     });
