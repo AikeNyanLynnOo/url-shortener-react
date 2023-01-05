@@ -43,9 +43,13 @@ class Main extends React.Component {
     });
     var self = this;
     var now = new Date();
+
+    const reqUrl = API+"url="+this.state.orgLink;
+    // console.log("Request URL -> " + reqUrl);
     axios
-      .get(`${API}/shorten?url=${this.state.orgLink}`)
+      .get(reqUrl)
       .then(function (response) {
+        // console.log(response);
         // handle success
         self.setState({
           isLoading: false,

@@ -1,1 +1,1 @@
-export const API = "https://api.shrtco.de/v2/";
+export const API = "https://api.shrtco.de/v2/shorten?";
