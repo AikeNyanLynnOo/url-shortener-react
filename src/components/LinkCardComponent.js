@@ -20,7 +20,7 @@ const LinkCard = ({ link, id, deleteLink }) => {
         <hr className="block md:hidden" />
         <div className="block md:flex my-3 md:my-0 items-center justify-between">
           <a
-            href={`https://${link.shortLink}`}
+            href={link.shortLink}
             rel="noreferrer"
             target="_blank"
             className="truncate mr-3 block md:inline short-link"
