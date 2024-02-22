@@ -57,7 +57,7 @@ class Main extends React.Component {
         },
       })
       .then(function (response) {
-        console.log(response.data);
+        console.log(response);
         // {
         //   url: string // The URL that was passed in the request.
         //   key: string // 6-digit key that can be used to reference the shortend URL.
