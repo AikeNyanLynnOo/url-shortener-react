@@ -54,6 +54,8 @@ class Main extends React.Component {
           // "api-key": process.env.REACT_APP_API_KEY,
           Accept: "application/json",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
         },
       })
       .then(function (response) {
