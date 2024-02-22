@@ -12,7 +12,7 @@ import Mid from "./MidComponent";
 import Footer from "./FooterComponent";
 
 // const
-import { API } from "../shared/api";
+// import { API } from "../shared/api";
 
 class Main extends React.Component {
   constructor(props) {
@@ -34,6 +34,7 @@ class Main extends React.Component {
     this.deleteLink = this.deleteLink.bind(this);
   }
   shortenLink(e) {
+    console.log("API key>>", process.env.REACT_APP_API_KEY);
     e.preventDefault();
     this.setState({
       isLoading: true,
@@ -44,12 +45,24 @@ class Main extends React.Component {
     var self = this;
     var now = new Date();
 
-    const reqUrl = API+"url="+this.state.orgLink;
-    // console.log("Request URL -> " + reqUrl);
     axios
-      .get(reqUrl)
+      .get(process.env.REACT_APP_API, {
+        params: {
+          url: this.state.orgLink, // The URL that you would like to be shortened.
+        },
+        headers: {
+          "api-key": process.env.REACT_APP_API_KEY,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
       .then(function (response) {
-        // console.log(response);
+        console.log(response.data);
+        // {
+        //   url: string // The URL that was passed in the request.
+        //   key: string // 6-digit key that can be used to reference the shortend URL.
+        //   shrtlnk: string // The fully qualified shortened URL that you can return to the user.
+        // }
         // handle success
         self.setState({
           isLoading: false,
@@ -62,8 +75,8 @@ class Main extends React.Component {
             self.enc([
               {
                 date: now,
-                shortLink: response.data.result.short_link2,
-                orgLink: response.data.result.original_link,
+                shortLink: response.data.shrtlnk,
+                orgLink: response.data.url,
               },
             ])
           );
@@ -71,8 +84,8 @@ class Main extends React.Component {
             recentLinks: [
               {
                 date: moment(now).calendar(),
-                shortLink: response.data.result.short_link2,
-                orgLink: response.data.result.original_link,
+                shortLink: response.data.shrtlnk,
+                orgLink: response.data.url,
               },
             ],
           });
@@ -80,8 +93,8 @@ class Main extends React.Component {
           var newArr = [...self.dec(localStorage.getItem("shrtLinks"))];
           newArr.unshift({
             date: now,
-            shortLink: response.data.result.short_link2,
-            orgLink: response.data.result.original_link,
+            shortLink: response.data.shrtlnk,
+                orgLink: response.data.url,
           });
           localStorage.setItem("shrtLinks", self.enc(newArr));
           newArr.forEach((el) => (el.date = moment(el.date).calendar()));
@@ -92,7 +105,7 @@ class Main extends React.Component {
       })
       .catch(function (error) {
         // handle error
-        console.clear();
+        // console.clear();
         if (error.response) {
           switch (error.response.data.error_code) {
             case 1:
