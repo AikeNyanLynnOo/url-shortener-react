@@ -34,7 +34,7 @@ class Main extends React.Component {
     this.deleteLink = this.deleteLink.bind(this);
   }
   shortenLink(e) {
-    console.log("API key>>", process.env.REACT_APP_API_KEY);
+    // console.log("API key>>", process.env.REACT_APP_API_KEY);
     e.preventDefault();
     this.setState({
       isLoading: true,
@@ -51,7 +51,7 @@ class Main extends React.Component {
           url: this.state.orgLink, // The URL that you would like to be shortened.
         },
         headers: {
-          "api-key": process.env.REACT_APP_API_KEY,
+          // "api-key": process.env.REACT_APP_API_KEY,
           Accept: "application/json",
           "Content-Type": "application/json",
         },
@@ -75,8 +75,8 @@ class Main extends React.Component {
             self.enc([
               {
                 date: now,
-                shortLink: response.data.shrtlnk,
-                orgLink: response.data.url,
+                shortLink: response.data.result_url,
+                orgLink: this.state.orgLink,
               },
             ])
           );
@@ -84,8 +84,8 @@ class Main extends React.Component {
             recentLinks: [
               {
                 date: moment(now).calendar(),
-                shortLink: response.data.shrtlnk,
-                orgLink: response.data.url,
+                shortLink: response.data.result_url,
+                orgLink: this.state.orgLink,
               },
             ],
           });
@@ -93,8 +93,8 @@ class Main extends React.Component {
           var newArr = [...self.dec(localStorage.getItem("shrtLinks"))];
           newArr.unshift({
             date: now,
-            shortLink: response.data.shrtlnk,
-                orgLink: response.data.url,
+            shortLink: response.data.result_url,
+            orgLink: this.state.orgLink,
           });
           localStorage.setItem("shrtLinks", self.enc(newArr));
           newArr.forEach((el) => (el.date = moment(el.date).calendar()));
