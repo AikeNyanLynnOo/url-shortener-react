@@ -46,13 +46,14 @@ class Main extends React.Component {
 
     axios
       .post(
-        process.env.REACT_APP_API,
+        `${process.env.REACT_APP_API}/url`,
         {
-          long_url: this.state.orgLink,
+          // long_url: this.state.orgLink,
+          url: this.state.orgLink,
         },
         {
           headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+            // Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
             Accept: "application/json",
             "Content-Type": "application/json",
             // "Access-Control-Allow-Origin": "*",
@@ -61,7 +62,8 @@ class Main extends React.Component {
         }
       )
       .then(function (response) {
-        // console.log(response.data);
+        console.log(response);
+        console.log(response.data);
         // handle success
         self.setState({
           isLoading: false,
